@@ -1,0 +1,135 @@
+html {
+    font-family: calibri, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 16px;
+    margin: 16px;
+}
+
+h1 {
+    font-size: 36px;
+    padding: 4px;
+    margin: 4px;
+}
+
+h2 {
+    font-size: 28px;
+    color: darkgray;
+}
+
+h2:hover {
+    color: gray;
+}
+
+#calc-container {
+    width: 300px;
+    height: 350px;
+    padding: 20px 16px 16px 16px;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+#calculator-grid {
+    display: grid;
+    height: 300px;
+    /* imaginary width: 500px ish */
+    /*This probably should be calculated with grid-gap in mind. */
+    position: relative;
+    margin: auto;
+    grid-template-areas: 'display display display display'
+                         'button-7 button-8 button-9 button-divide'
+                         'button-4 button-5 button-6 button-multiply'
+                         'button-1 button-2 button-3 button-subtract'
+                         'button-0 button-decimal button-add button-equals'
+                         'reserved reserved button-clear button-clearall';
+    /* calculated based on taking into account padding + grid-gap + border */
+    /* column width = calc-container width - (grid-gap * 3) */
+    grid-template-columns: repeat(4, 69px);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 8px;     
+}
+
+
+#display {
+    grid-area: display;
+    border: 1px solid maroon;
+    background: lightgray;
+}
+
+button {
+    font-size: 24px;
+}
+
+#button-7 {
+    grid-area: button-7;
+}
+
+#button-8 {
+    grid-area: button-8;
+}
+
+#button-9 {
+    grid-area: button-9;
+}
+
+#button-divide {
+    grid-area: button-divide;
+}
+
+#button-4 {
+    grid-area: button-4;
+}
+
+#button-5 {
+    grid-area: button-5;
+}
+
+#button-6 {
+    grid-area: button-6;
+}
+
+#button-multiply {
+    grid-area: button-multiply;
+}
+
+#button-1 {
+    grid-area: button-1;
+}
+
+#button-2 {
+    grid-area: button-2;
+}
+
+#button-3 {
+    grid-area: button-3;
+}
+
+#button-subtract {
+    grid-area: button-subtract;
+}
+
+#button-0 {
+    grid-area: button-0;
+}
+
+#button-decimal {
+    grid-area: button-decimal;
+}
+
+#button-add {
+    grid-area: button-add;
+}
+
+#button-equals {
+    grid-area: button-equals;
+}
+
+#button-clear {
+    grid-area: button-clear;
+}
+
+#button-clearall {
+    grid-area: button-clearall;
+}
