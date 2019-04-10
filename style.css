@@ -43,7 +43,7 @@ h2:hover {
                          'button-4 button-5 button-6 button-multiply'
                          'button-1 button-2 button-3 button-subtract'
                          'button-0 button-decimal button-add button-equals'
-                         'reserved reserved button-clear button-clearall';
+                         'reserved reserved button-clearentry button-clearall';
     /* calculated based on taking into account padding + grid-gap + border */
     /* column width = calc-container width - (grid-gap * 3) */
     grid-template-columns: repeat(4, 69px);
@@ -56,6 +56,9 @@ h2:hover {
     grid-area: display;
     border: 1px solid maroon;
     background: lightgray;
+    text-align: right;
+    padding: 10px;
+    font-size: 18px;
 }
 
 button {
@@ -126,8 +129,8 @@ button {
     grid-area: button-equals;
 }
 
-#button-clear {
-    grid-area: button-clear;
+#button-clearentry {
+    grid-area: button-clearentry;
 }
 
 #button-clearall {
